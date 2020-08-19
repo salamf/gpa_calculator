@@ -16,6 +16,8 @@ if type == "sessional" or type == "1":
 # 1. Multiply Grade Point X Unit Value for each course = Course Points
 # 2. Divide Total Course Points ÷ Total Unit Value = Sessional GPA
 
+    # initialize num of courses
+    num_of_courses = 0
     check = False
     while not check:
         try:
@@ -28,7 +30,8 @@ if type == "sessional" or type == "1":
     total_course_points = 0
     total_unit_value = 0
 
-    for i in range (1, num_of_courses + 1):
+    i = 1
+    while i <= num_of_courses:
         grade_point = 0
         unit_value = 0
 
@@ -37,9 +40,9 @@ if type == "sessional" or type == "1":
             if grade_point > 9:
                 raise ValueError
             unit_value = float(input("Enter unit value (number of credits) for course {}:".format(i)))
+            i += 1
         except ValueError:
             print("Sorry invalid")
-            i -= 1
             continue
 
         total_unit_value += unit_value
@@ -47,4 +50,4 @@ if type == "sessional" or type == "1":
 
     sessional_GPA = total_course_points/total_unit_value
 
-    print("Your sessional GPA is {.2}".format(sessional_GPA))
+    print("Your sessional GPA is {:.2f}".format(sessional_GPA))
