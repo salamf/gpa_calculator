@@ -1,21 +1,21 @@
 # Check what kind of GPA to be calculated
 type_of_gpa = input("Which GPA would you like to calculate? \n"
-                    "\t1. Sessional\n"
+                    "\t1. Semester\n"
                     "\t2. Cumulative\n").casefold()
 
 # If input is invalid keep asking until valid
-while type_of_gpa != "sessional" and type_of_gpa != "cumulative" and \
+while type_of_gpa != "semester" and type_of_gpa != "cumulative" and \
         type_of_gpa != "1" and type_of_gpa != "2":
     print("Sorry invalid input")
     type_of_gpa = input("Which GPA would you like to calculate? \n"
-                        "\t1. Sessional\n"
+                        "\t1. Semester\n"
                         "\t2. Cumulative\n").casefold()
 
-# If type is sessional GPA
-if type_of_gpa == "sessional" or type_of_gpa == "1":
-    # The sessional GPA is calculated as follows:
+# If type is Semester GPA
+if type_of_gpa == "semester" or type_of_gpa == "1":
+    # The semester GPA is calculated as follows:
     # 1. Multiply Grade Point X Unit Value for each course = Course Points
-    # 2. Divide Total Course Points ÷ Total Unit Value = Sessional GPA
+    # 2. Divide Total Course Points ÷ Total Unit Value = semester GPA
 
     # Initialize num of courses
     num_of_courses = 0
@@ -76,10 +76,10 @@ if type_of_gpa == "sessional" or type_of_gpa == "1":
         total_course_points += (grade_point * unit_value)
 
     # After info from all courses is collected, calculate gpa
-    sessional_GPA = total_course_points / total_unit_value
+    semester_GPA = total_course_points / total_unit_value
 
     # Print GPA to 2 decimal places
-    print("Your sessional GPA is {:.2f}".format(sessional_GPA))
+    print("Your semester GPA is {:.2f}".format(semester_GPA))
 
 # If type is Cumulative GPA
 else:
