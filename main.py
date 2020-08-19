@@ -48,7 +48,7 @@ if type_of_gpa == "semester" or type_of_gpa == "1":
         try:
             # Get grade point
             grade_point = int(input("Enter Grade point for course"
-                                    " {}:".format(i)))
+                                    " {}: ".format(i)))
 
             # If grade point is greater than 9 it is invalid
             if grade_point > 9:
@@ -57,7 +57,7 @@ if type_of_gpa == "semester" or type_of_gpa == "1":
             # Get unit value
             unit_value = float(input("Enter unit value "
                                      "(number of credits) for course "
-                                     "{}:".format(i)))
+                                     "{} :".format(i)))
 
             # Only increment i (move on to next course) if input is valid
             i += 1
@@ -118,7 +118,7 @@ else:
         try:
             # Get the current semesters GPA
             sem_gpa = float(input("Enter the GPA for semester"
-                                  " {}:".format(i)))
+                                  " {}: ".format(i)))
 
             # If GPA is greater than 9 it is invalid
             if sem_gpa > 9.0:
@@ -126,7 +126,7 @@ else:
 
             # Get the current semesters total unit values (credits)
             sem_credits = float(input("Enter total credits for semester"
-                                      " {}:".format(i)))
+                                      " {}: ".format(i)))
 
             # Only increment i (move on to next semester) if input is valid
             i += 1
