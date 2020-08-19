@@ -57,7 +57,7 @@ if type_of_gpa == "semester" or type_of_gpa == "1":
             # Get unit value
             unit_value = float(input("Enter unit value "
                                      "(number of credits) for course "
-                                     "{} :".format(i)))
+                                     "{}: ".format(i)))
 
             # Only increment i (move on to next course) if input is valid
             i += 1
